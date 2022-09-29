@@ -11,14 +11,6 @@ const Home: NextPageWithLayout = () => {
   useEffect(() => {
     console.log("changess");
   }, []);
-  
-  
-  
-
-  // const handle = () => {
-  //   setParams('false')
-  // };
-
   return (
     <Stack>
       <Button variant='outlined' >BS2</Button>

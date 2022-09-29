@@ -5,7 +5,7 @@
  */
 
 
-export const styled = {
+const styled = {
   container: {
     width: "100%",
     height: "100vh",
@@ -49,3 +49,5 @@ export const styled = {
     fontWeight: "bold",
   },
 };
+
+export default styled;

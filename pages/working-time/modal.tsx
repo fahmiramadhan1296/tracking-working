@@ -1,12 +1,10 @@
 import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, Typography } from "@mui/material";
 import React from "react";
 import { Stack } from "@mui/system";
-import { styled } from "./styles";
+import styled from "./_styles";
 import { IModalWorkingTime } from "./workingTimeModel";
 
-const WorkingTimeModal: React.FC<IModalWorkingTime> = (props) => {  
-  console.log(props);
-  
+const WorkingTimeModal: React.FC<IModalWorkingTime> = (props) => {    
   const renderClock = (data: string) => {
     const splitString = data?.split('');
     

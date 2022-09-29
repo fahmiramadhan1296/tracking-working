@@ -9,7 +9,7 @@ import { Dayjs } from "dayjs";
 import { IModalWorkingTime, IWorkingTime } from "./workingTimeModel";
 import WorkingTimeModal from "./modal";
 import { format2Number } from "@/utils/common";
-import { styled } from "./styles";
+import styled from "./_styles";
 import Input from "@/components/atoms/input";
 
 
