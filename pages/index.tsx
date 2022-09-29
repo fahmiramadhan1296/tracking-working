@@ -1,14 +1,34 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Input from '@/components/atoms/input';
+import Text from '@/components/atoms/text';
+import Layout from '@/components/templates/layout';
+import { Button, Stack } from '@mui/material';
+import React, { ReactElement, useEffect } from 'react';
+import { NextPageWithLayout } from './_app';
 
-const Home: NextPage = () => {
+const Home: NextPageWithLayout = () => {
+  const [params, setParams] = React.useState(null);
+
+  useEffect(() => {
+    console.log("changess");
+  }, []);
+  
+  
+  
+
+  // const handle = () => {
+  //   setParams('false')
+  // };
+
   return (
-    <div className={styles.container}>
-      TESS
-    </div>
-  )
-}
+    <Stack>
+      <Button variant='outlined' >BS2</Button>
+    </Stack>
+  );
+};
 
-export default Home
+Home.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
+};
+
+export default Home;
+
