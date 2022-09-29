@@ -1,3 +1,4 @@
+import React from "react";
 import type { NextPage } from "next";
 import { useState } from "react";
 import { TimePicker } from "@mui/x-date-pickers/TimePicker";
@@ -47,7 +48,8 @@ const WorkingTime: NextPage = () => {
 
   const submit = () => {
     const totalHoursInOffice = 6 * 60; /** 6 hours to minutes */
-    let { hours, minutes } = pageValue;
+    let { hours } = pageValue;
+    const { minutes } = pageValue;
     hours = hours * 60; /** convert to minutes */
     const countTimeInWorkArea = hours + minutes;
     const reminderTimeInWorkArea = totalHoursInOffice - countTimeInWorkArea;
