@@ -1,9 +1,10 @@
 import Input from '@/components/atoms/input';
 import Text from '@/components/atoms/text';
 import Layout from '@/components/templates/layout';
-import { Button, Stack } from '@mui/material';
+import { Stack } from '@mui/material';
 import React, { ReactElement, useEffect } from 'react';
 import { NextPageWithLayout } from './_app';
+import { Button } from '@fahmiramadhan1296/react-component';
 
 const Home: NextPageWithLayout = () => {
   const [params, setParams] = React.useState(null);
@@ -12,9 +13,7 @@ const Home: NextPageWithLayout = () => {
     console.log("changess");
   }, []);
   return (
-    <Stack>
-      <Button variant='outlined' >BS2</Button>
-    </Stack>
+    <div><Button label='MAMAT' />/</div>
   );
 };
 
