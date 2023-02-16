@@ -25,9 +25,6 @@ const WorkingTime: NextPage = () => {
   const [modalWorkingTime, setModalWorkingTime] =
     useState<IModalWorkingTime | null>(null);
 
-  useEffect(() => {
-    console.log(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS);
-  }, []);
   const handleOpenModal = (isOpen: boolean) => {
     setModalWorkingTime({
       ...modalWorkingTime,
