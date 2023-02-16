@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import type { NextPage } from "next";
 import { useState } from "react";
 import { TimePicker } from "@mui/x-date-pickers/TimePicker";
@@ -13,7 +13,6 @@ import { format2Number } from "@/utils/common";
 import styled from "./_styles";
 import Input from "@/components/atoms/input";
 
-
 const WorkingTime: NextPage = () => {
   const initialValue: IWorkingTime = {
     hours: 0,
@@ -23,14 +22,17 @@ const WorkingTime: NextPage = () => {
   };
 
   const [pageValue, setPageValue] = useState<IWorkingTime>(initialValue);
-  const [modalWorkingTime, setModalWorkingTime] = useState<IModalWorkingTime | null>(null);
+  const [modalWorkingTime, setModalWorkingTime] =
+    useState<IModalWorkingTime | null>(null);
 
-
+  useEffect(() => {
+    console.log(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS);
+  }, []);
   const handleOpenModal = (isOpen: boolean) => {
     setModalWorkingTime({
       ...modalWorkingTime,
       isOpen: isOpen,
-    })
+    });
   };
 
   const handleChangeState = (
@@ -57,8 +59,7 @@ const WorkingTime: NextPage = () => {
       reminderTimeInWorkArea,
       "minutes"
     );
-      console.log(timeBackToHome?.hour());
-      
+
     const time = {
       hours: format2Number(Number(timeBackToHome?.hour())),
       minutes: format2Number(Number(timeBackToHome?.minute())),
@@ -74,7 +75,6 @@ const WorkingTime: NextPage = () => {
   const checkMaxNumber = (maxNumber: number, value: number) => {
     return value < maxNumber;
   };
-
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
