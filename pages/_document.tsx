@@ -25,7 +25,11 @@ class MyDocument extends Document {
             strategy="lazyOnload"
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
           />
-
+          <Script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1420905962860871"
+            crossOrigin="anonymous"
+          ></Script>
           <Script id="gtm-script" strategy="lazyOnload">
             {`
                     window.dataLayer = window.dataLayer || [];
