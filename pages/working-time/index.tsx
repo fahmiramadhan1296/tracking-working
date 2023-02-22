@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import type { NextPage } from "next";
 import { useState } from "react";
 import { TimePicker } from "@mui/x-date-pickers/TimePicker";
-import { Box, Button, TextField } from "@mui/material";
+import { Box, Button, TextField, Typography } from "@mui/material";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { Stack } from "@mui/system";
@@ -152,6 +152,16 @@ const WorkingTime: NextPage = () => {
             </Stack>
           </Stack>
         </Box>
+        <Typography
+          variant="body1"
+          sx={{
+            position: "absolute",
+            bottom: "0",
+            left: "0",
+          }}
+        >
+          <Stack>Copyright: @fahmiramadhan96</Stack>
+        </Typography>
       </Stack>
     </LocalizationProvider>
   );
