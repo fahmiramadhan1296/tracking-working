@@ -4,7 +4,6 @@
  * https://mui.com/system/getting-started/usage/#performance-tradeoffs
  */
 
-
 export const styled = {
   container: {
     width: "100%",
@@ -20,14 +19,16 @@ export const styled = {
     border: "1px solid gray",
     backgroundImage:
       "linear-gradient(236deg,#525d95,#505a91 5%,#4b5488 15%,#464f80 23%,#30365d 48%,#262a44 74%,#20233a);",
-    color: 'white'
+    color: "white",
   },
   containerInput: {
-    color: 'white',
+    color: "white",
   },
   modalContainer: {
-    backgroundColor: "white",
+    display: "flex",
     justifyContent: "center",
+    backgroundColor: "white",
+    alignItems: "center",
   },
   modalContentContainer: {
     background: "#ff0000",
@@ -36,6 +37,7 @@ export const styled = {
     height: "200px",
     justifyContent: "center",
     alignItems: "center",
+    width: "100%",
   },
   modalContent: {
     padding: "12px",
