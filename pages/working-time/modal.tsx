@@ -42,7 +42,7 @@ const WorkingTimeModal: React.FC<IModalWorkingTime> = (props) => {
       </Stack>
     );
   };
-  console.log(workingTimeData.isGreen);
+
   return (
     <Dialog open={props?.isOpen ?? false} maxWidth={"md"} fullWidth={true}>
       <DialogContent sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
@@ -51,7 +51,7 @@ const WorkingTimeModal: React.FC<IModalWorkingTime> = (props) => {
           <Stack
             sx={{
               ...styled?.modalContentContainer,
-              backgroundColor: workingTimeData.isGreen ? "green" : "red",
+              backgroundColor: workingTimeData?.isGreen ? "green" : "red",
             }}
             direction={"row"}
             spacing={1}
