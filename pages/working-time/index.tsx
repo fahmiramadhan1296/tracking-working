@@ -116,7 +116,7 @@ const WorkingTime: NextPage = () => {
   }, [pageValue]);
 
   const checkMaxNumber = (maxNumber: number, value: number) => {
-    return value < maxNumber;
+    return value < maxNumber && value >= 0;
   };
 
   return (
@@ -155,7 +155,7 @@ const WorkingTime: NextPage = () => {
                   inputProps={{ maxLength: 1 }}
                   customInput={{ inputColor: "#FFFFFF" }}
                   onChange={(ev) =>
-                    checkMaxNumber(6, Number(ev?.target?.value)) &&
+                    checkMaxNumber(8, Number(ev?.target?.value)) &&
                     handleChangeState(
                       "hours",
                       Number(ev?.target?.value),
